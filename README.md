@@ -1,92 +1,90 @@
-# 🛠️ Ejercicios de Consultas en Bases de Datos - MySQL
+# 🛠️ Database Query Exercises - MySQL
 
-## 📄 Descripción
+## 📄 Description
 
-Este proyecto contiene una serie de ejercicios prácticos para trabajar consultas SQL sobre dos bases de datos diferentes: **Tienda** y **Universidad**. En cada ejercicio se propone trabajar con datos bien estructurados utilizando herramientas como `JOIN`, condiciones, agrupaciones, entre otros conceptos avanzados de SQL.
+This project includes a series of practical exercises to work with SQL queries on two different databases: **Store** and **University**. Each exercise is designed to work with well-structured data using tools like `JOIN`, conditions, aggregations, and other advanced SQL concepts.
 
-### 🧩 Ejercicios propuestos:
+### 🧩 Proposed Exercises
 
-#### Base de Datos: Tienda
-- La base de datos incluye dos tablas: `producto` y `fabricante`.
-- El objetivo es realizar consultas como: filtrados, ordenamientos, conversiones de datos, y relaciones entre tablas.
+#### Database: Store
+- The database includes two tables: `product` and `manufacturer`.
+- The goal is to perform queries such as filtering, sorting, data conversions, and relationships between tables.
 
-#### Base de Datos: Universidad
-- Se plantea trabajar con una base de datos que incluye tablas relacionadas con `alumnos`, `profesores`, `departamentos`, `grados` y `asignaturas`.
-- El objetivo es trabajar con operaciones complejas, como jerarquías de relaciones, uniones externas (`LEFT JOIN`, `RIGHT JOIN`), y consultas resumen.
+#### Database: University
+- This database includes tables related to `students`, `teachers`, `departments`, `degrees`, and `subjects`.
+- The aim is to work with complex operations such as relational hierarchies, outer joins (`LEFT JOIN`, `RIGHT JOIN`), and summary queries.
 
-Cada ejercicio está diseñado para poner en práctica conceptos esenciales de SQL, desde lo básico hasta operaciones más avanzadas.
+Each exercise is designed to practice essential SQL concepts, from basic to more advanced operations.
 
 ---
 
-## 💻 Tecnologías Utilizadas
+## 💻 Technologies Used
 
-El proyecto utiliza únicamente tecnologías relacionadas con bases de datos y sistemas de gestión. Aquí tienes un listado de lo utilizado:
+This project uses only database-related technologies and tools. Here's a list of what's used:
 
-- **MySQL** 8.0 o superior.
-- Scripts SQL para definición y manipulación de datos (DDL, DML).
-- Herramientas de edición y conexión:
+- **MySQL** version 8.0 or higher.
+- SQL scripts for data definition and manipulation (DDL, DML).
+- Editing and connection tools:
   - MySQL Workbench
-  - DBeaver o Navicat *(opcional)*
-  - Línea de comandos de MySQL
-- Editor de texto para revisar y modificar scripts (por ejemplo, Visual Studio Code).
+  - DBeaver or Navicat *(optional)*
+  - MySQL command-line interface
+- Text editor for reviewing and editing scripts (e.g., Visual Studio Code).
 
 ---
 
-## 📋 Requisitos
+## 📋 Requirements
 
-Antes de comenzar, asegúrate de cumplir con los siguientes requisitos mínimos:
+Before getting started, make sure you meet the following minimum requirements:
 
-- Base de datos **MySQL** instalada en tu sistema (versión 8.0 o superior recomendada).
-- Una herramienta (Workbench, DBeaver, etc.) para cargar y ejecutar los scripts SQL.
-- Acceso a internet para descargar los scripts de este repositorio.
-- [Opcional] Un servidor local de bases de datos como **XAMPP** o **WAMP**.
+- MySQL database installed on your system (version 8.0 or higher recommended).
+- A GUI tool (Workbench, DBeaver, etc.) to load and run SQL scripts.
+- Internet access to download the scripts from this repository.
+- [Optional] A local database server such as **XAMPP** or **WAMP**.
 
 ---
 
-## 🛠️ Instalación
+## 🛠️ Installation
 
-Sigue los pasos indicados para instalar el entorno y cargar las bases de datos:
+Follow the steps below to set up the environment and load the databases:
 
-### 1. Clona el repositorio
+### 1. Clone the repository
 
-    ```bash
-     git clone https://github.com/AlvaroLMC/2.2-MySQL-Queries.git
-     cd 2.2-MySQL-Queries
+      ```bash
+      git clone https://github.com/AlvaroLMC/2.2-MySQL-Queries.git
+      cd 2.2-MySQL-Queries
 
-2. Configura el servidor MySQL
+2. Configure your MySQL server
 
-    Inicia tu base de datos local (en XAMPP, WAMP o cualquier otro servidor MySQL).
+Start your local MySQL server (using XAMPP, WAMP, or any other MySQL server).
 
-    Asegúrate de conocer tu usuario (root) y contraseña (por defecto, sin contraseña para root).
+Make sure you know your username (root) and password (by default, root has no password).
+3. Load the database schemas
 
-3. Carga los esquemas de las bases de datos
-
-- Para cargar la base de datos Tienda:
-   ```bash
+  - To load the Store database:
+      ```bash
     mysql -u root -p < schema_tienda.sql
-- Para cargar la base de datos Universidad:
-   ```bash
+
+  - To load the University database:
+      ```bash
     mysql -u root -p < schema_universidad.sql
 
-## ▶️ Ejecución
+▶️ Execution
 
-Una vez cargados los esquemas de las bases de datos, puedes comenzar a ejecutar las consultas propuestas:
+Once the database schemas are loaded, you can start executing the proposed queries:
 
-  1. Abre tu herramienta favorita, como MySQL Workbench o DBeaver.
+1. Open your preferred SQL tool (e.g., MySQL Workbench or DBeaver).
 
-  2. Selecciona la base de datos correspondiente con alguno de los siguientes comandos:
-     ```bash
+2. Select the corresponding database with one of the following commands:
+      ```bash
     USE tienda;
     USE universidad;
 
-  3. Carga y ejecuta las consultas proporcionadas en los archivos:
+3. Load and execute the queries provided in the following files:
 
-  - consultas_tienda.sql → Ejercicios para la base de datos Tienda.
+   - consultas_tienda.sql → Exercises for the Store database.
 
-  - consultas_universidad.sql → Ejercicios para la base de datos Universidad.
+   - consultas_universidad.sql → Exercises for the University database.
 
-  4. Inspecciona los resultados en tu herramienta.
+4. Review the results in your tool.
 
-  - Cada consulta está diseñada para devolver una salida específica basada en las tablas proporcionadas.
-
----
+   - Each query is designed to return a specific output based on the provided tables.
