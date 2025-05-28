@@ -120,14 +120,5 @@ SELECT p.nombre FROM producto p JOIN fabricante f ON p.codigo_fabricante = f.cod
 SELECT p.*  FROM producto p, fabricante f WHERE p.codigo_fabricante = f.codigo AND p.precio >= (SELECT MAX(p2.precio)FROM producto p2, fabricante f2 WHERE p2.codigo_fabricante = f2.codigo AND f2.nombre = "Lenovo");
 
 -- 41. Lista todos los productos del fabricante Asus que tienen un precio superior al precio medio de todos sus productos.
-SELECT p.nombre AS nombre_producto, p.precio, f.nombre AS nombre_fabricante
-FROM producto p
-JOIN fabricante f ON p.codigo_fabricante = f.codigo
-WHERE f.nombre = 'Asus'
-  AND p.precio > (
-    SELECT AVG(p2.precio)
-    FROM producto p2
-    JOIN fabricante f2 ON p2.codigo_fabricante = f2.codigo
-    WHERE f2.nombre = 'Asus'
-  );
+SELECT p.nombre AS nombre_producto, p.precio, f.nombre AS nombre_fabricante FROM producto p JOIN fabricante f ON p.codigo_fabricante = f.codigo WHERE f.nombre = 'Asus' AND p.precio > (SELECT AVG(p2.precio) FROM producto p2 JOIN fabricante f2 ON p2.codigo_fabricante = f2.codigo WHERE f2.nombre = 'Asus');
   
